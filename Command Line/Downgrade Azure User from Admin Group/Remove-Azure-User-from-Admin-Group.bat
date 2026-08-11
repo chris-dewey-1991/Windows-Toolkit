@@ -2,7 +2,7 @@
 setlocal
 
 echo ============================================================
-echo  Net Primates - AzureAD Local Group Adjustment
+echo  AzureAD Local Group Adjustment
 echo ============================================================
 echo  This script will, for the AzureAD user you specify:
 echo    1. ADD the user to the local "Users" group
