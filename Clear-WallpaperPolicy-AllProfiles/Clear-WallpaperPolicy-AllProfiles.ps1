@@ -1,7 +1,7 @@
 ﻿#Requires -RunAsAdministrator
 <#
 .SYNOPSIS
-    NP-RemoveWallpaperPolicyAllUsers.ps1
+    Clear-WallpaperPolicy-AllProfiles.ps1
     Deletes HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System\Wallpaper and
     WallpaperStyle for every local user profile on the machine. Straight delete only —
     no ownership/ACL modification. If a key is GPO-locked, the delete will fail and get logged.
@@ -21,8 +21,8 @@ param(
 )
 
 $Config = [ordered]@{
-    LogDir      = 'C:\Source\NetPrimates-Logs'
-    LogFile     = "NP-RemoveWallpaperPolicyAllUsers_{0}.log" -f (Get-Date -Format 'yyyyMMdd_HHmmss')
+    LogDir      = 'C:\Source\Logs'
+    LogFile     = "Clear-WallpaperPolicy-AllProfiles_{0}.log" -f (Get-Date -Format 'yyyyMMdd_HHmmss')
     RelativeKey = 'Software\Microsoft\Windows\CurrentVersion\Policies\System'
     ValueNames  = @('Wallpaper', 'WallpaperStyle')
 }
