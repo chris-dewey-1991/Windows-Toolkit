@@ -17,7 +17,7 @@
 
 [CmdletBinding()]
 param(
-    [switch]$DryRun = $false
+    [switch]$DryRun = $true
 )
 
 $Config = [ordered]@{
